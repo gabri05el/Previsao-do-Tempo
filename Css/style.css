@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+:root {
+    --fonte-do-texto: 'Dancing Script', cursive;
+
+    --cor-preto-01: #0000006e;
+    --cor-preto-02: #00000038;
+    --cor-branco: #ffffff;
+    --cor-azul: #099bf0;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--fonte-do-texto);
     margin: 0;
     padding: 0;    
 }
@@ -17,35 +26,50 @@ body {
 }
 
 .caixa_maior {
-    background-color: #0000006e;
-    border-radius: 1.6rem;
-    padding: 2.5rem;
+    background-color: var(--cor-preto-01);
     width: 95%;
     max-width: 28.1rem;
+    border-radius: 1.6rem;
+    padding: 2.5rem;
+}
+
+.caixa_pesquisa {
+    display: flex;
 }
 
 .input_cidade {
+    background-color: var(--cor-preto-02);
+    color: var(--cor-branco);
     border: none;
     outline: none;
-    background-color: #00000038;
-    color: white;
     width: calc(100% -6.2rem);
-    padding: 0.6rem;
-    border-radius: 1.6rem;
     font-size: 1.5rem;
+    border-radius: 1.6rem;
+    padding: 1rem;
+}
+
+.input_cidade::placeholder {
+    color: var(--cor-branco);
 }
 
 .botao_busca {
-    background-color: #0000006e;
+    background-color: var(--cor-preto-01);
+    color: var(--cor-branco);
     cursor: pointer;
     float: right;
-    border: none;
     outline: none;
-    padding: 0.6rem;
+    border: none;
     border-radius: 3.1rem;
+    padding: 1rem;
+    margin-left: 0.3rem;
 }
 
-.img_busca {
+.botao_busca:hover {
+    color: var(--cor-azul);
+    transition: all 0.4s;
+}
+
+.busca {
     width: 1.2rem;
 }
 
@@ -54,12 +78,12 @@ body {
 }
 
 .cidade {
-    color: white;
+    color: var(--cor-branco);
     font-size: 1.7rem;
 }
 
 .temperatura {
-    color: white;
+    color: var(--cor-branco);
     font-size: 1.2rem;
     margin-top: 0.9rem;
 }
@@ -71,13 +95,13 @@ body {
 }
 
 .texto_previsao {
-    color: white;
+    color: var(--cor-branco);
     margin-left: 0.6rem;
     font-size: 1.2rem;
 }
 
 .umidade {
-    color: white;
+    color: var(--cor-branco);
     margin-top: 0.9rem;
     font-size: 1.2rem;
 }
