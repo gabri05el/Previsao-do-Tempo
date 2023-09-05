@@ -4,27 +4,30 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./Css/style.css">
         <title>Previsão Do Tempo</title>
     </head>
     <body>
-        
-        <div class="caixa_maior">
-            <input class="input_cidade" id="input-cidade" placeholder="Digite o nome da cidade">
-            <button class="botao_busca" onclick="cliqueiNoBotao()">
-                <img class="img_busca" src="./img/Buscar.svg" alt="Imagem referente a lupa de pesquisar">
-            </button>
-            <div class="caixa_media">
-                <h2 class="cidade" id="cidade">Cidade Pesquisada</h2>
-                <p class="temperatura" id="temperatura">Temperatura em graus</p>
-                <div class="caixa_menor">
-                    <img class="img_previsao" id="img-previsao" src="https://openweathermap.org/img/wn/04n.png" alt="Imagem mostrando como o tempo está">
-                    <p class="texto_previsao" id="texto-previsao">Tempo</p>
+        <main>
+            <div class="caixa_maior">
+                <div class="caixa_pesquisa">
+                    <input class="input_cidade" id="input-cidade" placeholder="Digite o nome da cidade">
+                    <button class="botao_busca" onclick="cliqueiNoBotao()">
+                        <i class="fa-solid fa-magnifying-glass busca"></i>
+                    </button>
                 </div>
-                <p class="umidade" id="umidade">Umidade</p>
+                <div class="caixa_media">
+                    <h2 class="cidade" id="cidade">Cidade</h2>
+                    <p class="temperatura" id="temperatura">Temperatura em graus</p>
+                    <div class="caixa_menor">
+                        <img class="img_previsao" id="img-previsao" src="https://openweathermap.org/img/wn/04n.png" alt="Imagem mostrando como o tempo está">
+                        <p class="texto_previsao" id="texto-previsao">Tempo</p>
+                    </div>
+                    <p class="umidade" id="umidade">Umidade</p>
+                </div>
             </div>
-        </div>
-
-        <script src="./Js/script.js"></script>
+        </main>
     </body>
+    <script src="./Js/script.js"></script>
 </html>
